@@ -4,12 +4,12 @@ import "../../styles/home.scss";
 
 export const Home = () => (
 	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
+		<h1>STAR WARS</h1>
 		<p>
 			<img src={rigoImage} />
 		</p>
 		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
+			ENTER THE BLOG
 		</a>
 	</div>
 );
