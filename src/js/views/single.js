@@ -8,7 +8,7 @@ export const Single = props => {
 	const params = useParams();
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the character element: {store.character[params.theid].title}</h1>
+			<h3 className="display-4">This will show the character element: {store.peopleList[params.theid].name}</h3>
 
 			<hr className="my-4" />
 
