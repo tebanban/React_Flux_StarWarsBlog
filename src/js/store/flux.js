@@ -3,21 +3,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			character: [
 				{
-					title: "FIRST",
+					title: "Luke Skywalker",
 					background: "white",
 					initial: "white"
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "THIRD",
+					title: "Yoda",
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+
+			peopleList: [],
+			favorites: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction

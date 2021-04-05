@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/blog.scss";
+import { Card } from "react-bootstrap";
 
 export const Blog = () => {
 	const { store, actions } = useContext(Context);
@@ -18,9 +19,12 @@ export const Blog = () => {
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background }}>
 							<h3>Characters</h3>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
+							<Card style={{ width: "14rem" }}>
+								<Link to={"/single/" + index}>
+									<h5>{item.title}</h5>
+								</Link>
+							</Card>
+
 							{// Conditional render example
 							// Check to see if the background is orange, if so, display the message
 							item.background === "orange" ? (
