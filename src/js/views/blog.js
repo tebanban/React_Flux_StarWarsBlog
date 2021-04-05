@@ -9,6 +9,10 @@ import { Card } from "react-bootstrap";
 export const Blog = () => {
 	const { store, actions } = useContext(Context);
 
+	useEffect(() => {
+		actions.fetchPeople();
+	}, []);
+
 	return (
 		<div className="container">
 			<ul className="list-group">
@@ -19,6 +23,13 @@ export const Blog = () => {
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background }}>
 							<h3>Characters</h3>
+							{/* <span>{JSON.stringify(store.peopleList)}</span> */}
+							<ul>
+								{store.peopleList.map((item, index) => {
+									return <li key="index">{item.name}</li>;
+								})}
+							</ul>
+
 							<Card style={{ width: "14rem" }}>
 								<Link to={"/single/" + index}>
 									<h5>{item.title}</h5>
