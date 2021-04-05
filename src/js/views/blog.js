@@ -23,9 +23,15 @@ export const Blog = () => {
 						<Card key="index" style={{ width: "14rem" }}>
 							<Link to={"/single/" + index}>
 								<h5>{item.name}</h5>
-								<p>{item.gender}</p>
-								<p>{item.birth_year}</p>
 							</Link>
+							<p>
+								Gender:
+								{" " + item.gender}
+							</p>
+							<p>
+								Birth year:
+								{" " + item.birth_year}
+							</p>
 						</Card>
 					);
 				})}
