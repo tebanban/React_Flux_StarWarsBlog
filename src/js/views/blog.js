@@ -11,12 +11,13 @@ export const Blog = () => {
 	return (
 		<div className="container">
 			<ul className="list-group">
-				{store.blog.map((item, index) => {
+				{store.character.map((item, index) => {
 					return (
 						<li
 							key={index}
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background }}>
+							<h3>Characters</h3>
 							<Link to={"/single/" + index}>
 								<span>Link to: {item.title}</span>
 							</Link>

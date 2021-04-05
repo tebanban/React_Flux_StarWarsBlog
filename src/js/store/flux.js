@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			blog: [
+			character: [
 				{
 					title: "FIRST",
 					background: "white",
@@ -35,13 +35,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//we have to loop the entire demo array to look for the respective index
 				//and change its color
-				const blog = store.blog.map((elm, i) => {
+				const character = store.character.map((elm, i) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
 
 				//reset the global store
-				setStore({ blog: blog });
+				setStore({ character: character });
 			}
 		}
 	};
