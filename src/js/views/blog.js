@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
 import "../../styles/blog.scss";
-import logow from "../../img/stormtrooper.jpg";
-import { Card } from "react-bootstrap";
+import cardImg from "../../img/400x200.png";
+import { Card, Row, Button } from "react-bootstrap";
 
 export const Blog = () => {
 	const { store, actions } = useContext(Context);
@@ -18,14 +17,15 @@ export const Blog = () => {
 		<div className="container">
 			{/* <span>{JSON.stringify(store.peopleList)}</span> */}
 			<h3>Characters</h3>
-			<ul>
+			<span>{JSON.stringify(store.favorites)}</span>
+			<Row className="d-flex justify-content-between overflow-auto">
 				{store.peopleList.map((item, index) => {
 					return (
-						<Card key="index" style={{ width: "14rem" }}>
+						<Card key="index" style={{ width: "16rem" }}>
+							<img src={cardImg} />
 							<Link to={"/single/" + index}>
 								<h5>{item.name}</h5>
 							</Link>
-							<img src={logow} />
 							<p>
 								Gender:
 								{" " + item.gender}
@@ -34,10 +34,13 @@ export const Blog = () => {
 								Birth year:
 								{" " + item.birth_year}
 							</p>
+							<Button variant="primary" onClick={() => actions.setFavorites(item.name)}>
+								&#9825;
+							</Button>
 						</Card>
 					);
 				})}
-			</ul>
+			</Row>
 
 			<br />
 			<Link to="/">

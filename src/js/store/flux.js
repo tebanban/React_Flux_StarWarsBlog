@@ -32,6 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ character: character });
 			},
+
 			fetchPeople: async () => {
 				const URL = "https://swapi.dev/api/people/";
 				const CONFIG = {
@@ -45,6 +46,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				console.log(">>DATA>>", json);
 				setStore({ peopleList: json.results });
+			},
+
+			setFavorites: name => {
+				const store = getStore();
+				setStore({ favorites: [...store.favorites, name] });
 			}
 		}
 	};
