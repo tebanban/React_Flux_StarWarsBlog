@@ -9,9 +9,13 @@ export const NavbarMenu = () => {
 	return (
 		<Navbar className="navbar navbar-light bg-light mb-3">
 			<DropdownButton id="dropdown-basic-button" title="Dropdown button">
-				<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-				<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-				<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+				{store.favorites.map((item, index) => {
+					return (
+						<Dropdown.Item key={index} href="#/action-1">
+							{item}
+						</Dropdown.Item>
+					);
+				})}
 			</DropdownButton>
 		</Navbar>
 	);
