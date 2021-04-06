@@ -34,9 +34,17 @@ export const Blog = () => {
 								Birth year:
 								{" " + item.birth_year}
 							</p>
-							<Button variant="primary" onClick={() => actions.setFavorites(item.name)}>
-								&#9825;
-							</Button>
+							<div>
+								<Link to={"/single/" + index}>
+									<Button>Learn more...</Button>
+								</Link>
+								<Button
+									style={{ width: "3rem" }}
+									variant="primary"
+									onClick={() => actions.setFavorites(item.name)}>
+									&#9825;
+								</Button>
+							</div>
 						</Card>
 					);
 				})}
