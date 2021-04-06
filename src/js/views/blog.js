@@ -21,7 +21,7 @@ export const Blog = () => {
 			<Row className="d-flex justify-content-between overflow-auto">
 				{store.peopleList.map((item, index) => {
 					return (
-						<Card key="index" style={{ width: "16rem" }}>
+						<Card className="mb-3" key="index" style={{ width: "16rem" }}>
 							<img src={cardImg} />
 							<Link to={"/single/" + index}>
 								<h5>{item.name}</h5>
