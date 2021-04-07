@@ -15,13 +15,12 @@ export const Blog = () => {
 
 	return (
 		<div className="container">
-			{/* <span>{JSON.stringify(store.peopleList)}</span> */}
 			<h3>Characters</h3>
 			<span>{JSON.stringify(store.favorites)}</span>
-			<Row className="d-flex justify-content-between overflow-auto">
+			<div className="d-flex justify-content-between overflow-auto">
 				{store.peopleList.map((item, index) => {
 					return (
-						<Card className="mb-3" key="index" style={{ width: "16rem" }}>
+						<Card className="mx-2 p-1" key="index" style={{ "min-width": "16rem" }}>
 							<img src={cardImg} />
 							<Link to={"/single/" + index}>
 								<h5>{item.name}</h5>
@@ -34,21 +33,23 @@ export const Blog = () => {
 								Birth year:
 								{" " + item.birth_year}
 							</p>
-							<div>
+							<div className="d-flex justify-content-between">
 								<Link to={"/single/" + index}>
-									<Button>Learn more...</Button>
+									<Button variant="outline-primary">Learn more...</Button>
 								</Link>
-								<Button
-									style={{ width: "3rem" }}
-									variant="primary"
-									onClick={() => actions.setFavorites(item.name)}>
-									&#9825;
-								</Button>
+								{store.favorites.includes(item.name) ? null : (
+									<Button
+										style={{ width: "3rem" }}
+										variant="outline-warning"
+										onClick={() => actions.setFavorites(item.name)}>
+										&#9825;
+									</Button>
+								)}
 							</div>
 						</Card>
 					);
 				})}
-			</Row>
+			</div>
 
 			<br />
 			<Link to="/">

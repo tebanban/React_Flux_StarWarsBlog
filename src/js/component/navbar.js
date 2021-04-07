@@ -8,10 +8,10 @@ export const NavbarMenu = () => {
 
 	return (
 		<Navbar className="navbar navbar-light bg-light mb-3">
-			<DropdownButton id="dropdown-basic-button" title="Favorites">
+			<DropdownButton id="dropdown-basic-button" title={`Favorites ${store.favorites.length}`}>
 				{store.favorites.map((item, index) => {
 					return (
-						<Dropdown.Item key={index} href="#/action-1">
+						<Dropdown.Item key={index} href={"/single/" + index}>
 							{item}
 						</Dropdown.Item>
 					);
