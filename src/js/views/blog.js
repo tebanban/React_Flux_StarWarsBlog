@@ -1,60 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import React from "react";
+import "../../styles/home.scss";
+import Character from "../component/character";
+import Planet from "../component/planet";
+import Starship from "../component/starship";
 
-import "../../styles/blog.scss";
-import cardImg from "../../img/400x200.png";
-import { Card, Row, Button } from "react-bootstrap";
-
-export const Blog = () => {
-	const { store, actions } = useContext(Context);
-
-	useEffect(() => {
-		actions.fetchPeople();
-	}, []);
-
-	return (
-		<div className="container">
-			<h3>Characters</h3>
-			<span>{JSON.stringify(store.favorites)}</span>
-			<div className="d-flex justify-content-between overflow-auto">
-				{store.peopleList.map((item, index) => {
-					return (
-						<Card className="mx-2 p-1" key="index" style={{ "min-width": "16rem" }}>
-							<img src={cardImg} />
-							<Link to={"/single/" + index}>
-								<h5>{item.name}</h5>
-							</Link>
-							<p>
-								Gender:
-								{" " + item.gender}
-							</p>
-							<p>
-								Birth year:
-								{" " + item.birth_year}
-							</p>
-							<div className="d-flex justify-content-between">
-								<Link to={"/single/" + index}>
-									<Button variant="outline-primary">Learn more...</Button>
-								</Link>
-								{store.favorites.includes(item.name) ? null : (
-									<Button
-										style={{ width: "3rem" }}
-										variant="outline-warning"
-										onClick={() => actions.setFavorites(item.name)}>
-										&#9825;
-									</Button>
-								)}
-							</div>
-						</Card>
-					);
-				})}
-			</div>
-
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
-		</div>
-	);
-};
+export const Blog = () => (
+	<div className="blog">
+		<Character />
+		<Planet />
+		<Starship />
+	</div>
+);
