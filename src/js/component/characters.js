@@ -6,7 +6,7 @@ import "../../styles/blog.scss";
 import cardImg from "../../img/400x200.png";
 import { Card, Row, Button } from "react-bootstrap";
 
-const Character = () => {
+const Characters = () => {
 	const { store, actions } = useContext(Context);
 
 	useEffect(() => {
@@ -37,7 +37,11 @@ const Character = () => {
 								<Link to={"/single/" + index}>
 									<Button variant="outline-primary">Learn more...</Button>
 								</Link>
-								{store.favorites.includes(item.name) ? null : (
+								{store.favorites.includes(item.name) ? (
+									<Button style={{ width: "3rem" }} disabled>
+										&#9825;
+									</Button>
+								) : (
 									<Button
 										style={{ width: "3rem" }}
 										variant="outline-warning"
@@ -58,4 +62,4 @@ const Character = () => {
 		</div>
 	);
 };
-export default Character;
+export default Characters;

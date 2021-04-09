@@ -1,7 +1,7 @@
 import React from "react";
 
-const Starship = () => {
+const Starships = () => {
 	return <div> Starships here</div>;
 };
 
-export default Starship;
+export default Starships;

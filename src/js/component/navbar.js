@@ -11,9 +11,9 @@ export const NavbarMenu = () => {
 			<DropdownButton id="dropdown-basic-button" title={`Favorites ${store.favorites.length}`}>
 				{store.favorites.map((item, index) => {
 					return (
-						<Dropdown.Item key={index} href={"/single/" + index}>
-							{item}
-						</Dropdown.Item>
+						<div className="row" key={index}>
+							<Dropdown.Item>{item}</Dropdown.Item>;
+						</div>
 					);
 				})}
 			</DropdownButton>

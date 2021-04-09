@@ -1,13 +1,13 @@
 import React from "react";
 import "../../styles/home.scss";
-import Character from "../component/character";
-import Planet from "../component/planet";
-import Starship from "../component/starship";
+import Characters from "../component/characters";
+import Planets from "../component/planets";
+import Starships from "../component/starships";
 
 export const Blog = () => (
 	<div className="blog">
-		<Character />
-		<Planet />
-		<Starship />
+		<Characters />
+		<Planets />
+		<Starships />
 	</div>
 );
