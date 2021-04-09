@@ -24,6 +24,18 @@ export const Single = props => {
 						</p>
 					</Media.Body>
 				</Media>
+				<hr />
+				<Row>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+					<Col>1 of 8</Col>
+				</Row>
+				<hr />
 
 				<Link to="/blog" className="btn btn-success">
 					THE BLOG
