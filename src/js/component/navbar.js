@@ -14,7 +14,10 @@ export const NavbarMenu = () => {
 						<div className="row" key={Math.random() * 1000}>
 							<Dropdown.Item className="d-flex justify-content-between">
 								{item}{" "}
-								<Button>
+								<Button
+									onClick={() => {
+										actions.deleteFavorite(item);
+									}}>
 									<i className="fa fa-trash p-1" aria-hidden="true" />
 								</Button>
 							</Dropdown.Item>
