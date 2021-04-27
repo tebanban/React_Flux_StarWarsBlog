@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Container, Row, Col, Media } from "react-bootstrap";
 import detailImg from "../../img/800x600.png";
 
-export const Single = props => {
-	const { store, actions } = useContext(Context);
+export const Single = () => {
+	const { store } = useContext(Context);
 	const params = useParams();
 	return (
 		<>
@@ -26,7 +26,7 @@ export const Single = props => {
 				</Media>
 				<hr />
 				<Row>
-					<Col>1 of 8</Col>
+					<Col>{store.peopleList[params.theid].birth_year}</Col>
 					<Col>1 of 8</Col>
 					<Col>1 of 8</Col>
 					<Col>1 of 8</Col>
@@ -43,8 +43,4 @@ export const Single = props => {
 			</Container>
 		</>
 	);
-};
-
-Single.propTypes = {
-	match: PropTypes.object
 };
