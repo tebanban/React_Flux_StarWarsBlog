@@ -1,5 +1,5 @@
 import React from "react";
-import starwars_logo from "../../img/starscover.png";
+import starwars_logo from "../../img/death.png";
 import "../../styles/home.scss";
 import { Link } from "react-router-dom";
 
