@@ -16,7 +16,7 @@ const Characters = () => {
 	return (
 		<div className="container pb-4">
 			<h3>Characters</h3>
-			<span>{JSON.stringify(store.favorites)}</span>
+			<span className="altfavList">{JSON.stringify(store.favorites)}</span>
 			<div className="d-flex justify-content-between overflow-auto">
 				{store.peopleList.map((item, index) => {
 					return (

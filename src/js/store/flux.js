@@ -18,7 +18,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
 
-				console.log(">>DATA>>", json);
+				//console.log(">>DATA>>", json);
 				setStore({ peopleList: json.results });
 			},
 
@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
 
-				console.log(">>DATA>>", json);
+				//console.log(">>DATA>>", json);
 				setStore({ planetsList: json.results });
 			},
 
@@ -48,7 +48,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(URL, CONFIG);
 				const json = await response.json();
 
-				console.log(">>DATA>>", json);
+				//console.log(">>DATA>>", json);
 				setStore({ starshipsList: json.results });
 			},
 

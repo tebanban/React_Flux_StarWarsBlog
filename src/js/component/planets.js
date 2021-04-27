@@ -16,7 +16,7 @@ const Planets = () => {
 	return (
 		<div className="container pb-4">
 			<h3>Planets</h3>
-			<span>{JSON.stringify(store.favorites)}</span>
+			<span className="altfavList">{JSON.stringify(store.favorites)}</span>
 			<div className="d-flex justify-content-between overflow-auto">
 				{store.planetsList.map((item, index) => {
 					return (
