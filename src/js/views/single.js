@@ -10,7 +10,7 @@ export const Single = () => {
 	const params = useParams();
 	return (
 		<>
-			<Container>
+			<Container className="singleContent">
 				<Media>
 					<img width={600} height={400} className="mr-3" src={detailImg} alt="Generic placeholder" />
 					<Media.Body className="align-text-center">
@@ -26,14 +26,30 @@ export const Single = () => {
 				</Media>
 				<hr />
 				<Row>
-					<Col>{store.peopleList[params.theid].birth_year}</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
-					<Col>1 of 8</Col>
+					<Col>
+						<p>Height</p>
+						<p>{store.peopleList[params.theid].height}</p>
+					</Col>
+					<Col>
+						<p>Mass</p>
+						<p>{store.peopleList[params.theid].mass}</p>
+					</Col>
+					<Col>
+						<p>Hair color</p>
+						<p>{store.peopleList[params.theid].hair_color}</p>
+					</Col>
+					<Col>
+						<p>Skin Color</p>
+						<p>{store.peopleList[params.theid].skin_color}</p>
+					</Col>
+					<Col>
+						<p>Eye Color</p>
+						<p>{store.peopleList[params.theid].eye_color}</p>
+					</Col>
+					<Col>
+						<p>Birth year</p>
+						<p>{store.peopleList[params.theid].birth_year}</p>
+					</Col>
 				</Row>
 				<hr />
 

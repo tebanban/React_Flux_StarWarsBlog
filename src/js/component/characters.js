@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/blog.scss";
 import cardImg from "../../img/400x200.png";
-import { Card, Row, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 const Characters = () => {
 	const { store, actions } = useContext(Context);
