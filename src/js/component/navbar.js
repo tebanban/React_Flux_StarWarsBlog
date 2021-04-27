@@ -2,14 +2,15 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Navbar, DropdownButton, Dropdown, Button, Nav } from "react-bootstrap";
-import { navLogo } from "../../img/starslogo.png";
 
 export const NavbarMenu = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<Navbar className="navbar navbar-dark bg-dark mb-4">
-			<Navbar.Brand href="/">STAR WARS</Navbar.Brand>
+			<Navbar.Brand href="/">
+				<i className="fab fa-jedi-order" />
+			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav" />
 
