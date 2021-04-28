@@ -15,8 +15,8 @@ export const NavbarMenu = () => {
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav" />
 
-			<Nav className="mr-auto">
-				<DropdownButton id="dropdown-basic-button" title={`Favorites ${store.favorites.length}`}>
+			<Nav className="mr-auto dropleft">
+				<DropdownButton id="dropdown-basic-button " title={`Favorites ${store.favorites.length}`}>
 					{store.favorites.map((item, index) => {
 						return (
 							<div className="row" key={Math.random() * 1000}>
