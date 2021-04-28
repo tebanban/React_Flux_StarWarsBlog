@@ -34,7 +34,7 @@ const Planets = () => {
 								{" " + item.diameter}
 							</p>
 							<div className="d-flex justify-content-between">
-								<Link to={"/single/" + index}>
+								<Link to={"/singleplanet/" + index}>
 									<Button variant="outline-primary">Learn more...</Button>
 								</Link>
 								{store.favorites.includes(item.name) ? (
