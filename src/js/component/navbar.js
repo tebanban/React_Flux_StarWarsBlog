@@ -9,9 +9,9 @@ export const NavbarMenu = () => {
 
 	return (
 		<Navbar className="navbar navbar-dark  mb-4">
-			<Navbar.Brand href="/">
+			<Link to={"/"}>
 				<img src={navLogo} />
-			</Navbar.Brand>
+			</Link>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav" />
 
