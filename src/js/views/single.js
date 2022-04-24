@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import detailImg from "../../img/800x600.png";
 
 export const Single = () => {
@@ -11,9 +11,9 @@ export const Single = () => {
 	return (
 		<>
 			<Container className="singleContent">
-				<Media>
+				<Card>
 					<img width={600} height={400} className="mr-3" src={detailImg} alt="Generic placeholder" />
-					<Media.Body className="align-text-center">
+					<Card.Body className="align-text-center">
 						<h5>{store.peopleList[params.theid].name}</h5>
 						<p>
 							Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin
@@ -22,8 +22,8 @@ export const Single = () => {
 							purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
 							nisi vulputate fringilla.
 						</p>
-					</Media.Body>
-				</Media>
+					</Card.Body>
+				</Card>
 				<hr />
 				<Row>
 					<Col>

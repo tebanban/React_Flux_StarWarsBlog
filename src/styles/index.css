@@ -1,3 +1,21 @@
 /* 
     General Styles
 */
+body{
+    background-color: black;
+}
+.altfavList {
+    color: #131313
+}
+
+.blogSubtitle{
+    color: #ffffff
+}
+
+.singleContent{
+    color: #141414;
+}
+
+.card{
+    color: #131313
+}
