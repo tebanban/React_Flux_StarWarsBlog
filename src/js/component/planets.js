@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-import "../../styles/blog.scss";
+import "../../styles/blog.css";
 import cardImg from "../../img/400x200.png";
 import { Card, Button } from "react-bootstrap";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import starwars_logo from "../../img/death.png";
-import "../../styles/home.scss";
+import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
 export const Home = () => (

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Container, Row, Col, Media } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import detailImg from "../../img/800x600.png";
 
 export const Single = () => {
